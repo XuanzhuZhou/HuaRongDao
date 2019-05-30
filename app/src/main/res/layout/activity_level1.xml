@@ -8,15 +8,16 @@
     android:padding="10dp"
     tools:context=".level1">
 
-    <Klotski
+    <com.example.huarongdao.Klotski
         android:id="@+id/main_klotski"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:blockDrawable1x1="@mipmap/bing2"
         app:blockDrawable1x2="#342187"
         app:blockDrawable2x1="@color/colorPrimary"
         app:blockDrawable2x2="@color/colorAccent"
         app:blockSpacing="3dp"
-        tools:ignore="MissingPrefix" />
+        tools:ignore="MissingPrefix" >
+        </com.example.huarongdao.Klotski>
+
 
 </RelativeLayout>
