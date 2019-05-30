@@ -20,14 +20,14 @@ public class LevelActivity extends AppCompatActivity {
 
     public void gotolevel1(View view) {
         Intent intent = new Intent();
-        intent.setClass(LevelActivity.this,LevelActivity.class);
+        intent.setClass(LevelActivity.this,Level1Activity.class);
         startActivity(intent);
     }
 
     public void gotolevel2(View view) {
         Intent intent = new Intent();
-//        intent.setClass(LevelActivity.this,Level2Activity.class);
-//        startActivity(intent);
+        intent.setClass(LevelActivity.this,Level2Activity.class);
+        startActivity(intent);
     }
 
     public void gotolevel3(View view) {

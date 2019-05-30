@@ -5,7 +5,7 @@ import android.os.Bundle;
 
 import java.util.List;
 
-public class level1 extends AppCompatActivity {
+public class Level1Activity extends AppCompatActivity {
     private Klotski mKlotskiView;
 
     @Override
