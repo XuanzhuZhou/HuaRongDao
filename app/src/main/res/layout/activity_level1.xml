@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".level1">
+
+    <Klotski
+        android:id="@+id/main_klotski"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:blockDrawable1x1="@mipmap/bing2"
+        app:blockDrawable1x2="#342187"
+        app:blockDrawable2x1="@color/colorPrimary"
+        app:blockDrawable2x2="@color/colorAccent"
+        app:blockSpacing="3dp"
+        tools:ignore="MissingPrefix" />
+
+</RelativeLayout>
