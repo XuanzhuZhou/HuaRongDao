@@ -20,42 +20,44 @@
         app:blockDrawable2x1d="@mipmap/machao"
         app:blockDrawable2x2="@mipmap/caocao"
         app:blockSpacing="3dp" />
+    <!--设置返回按钮的相对位置-->
+    <Button
+        android:id="@+id/back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_klotski"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:onClick="back"
+        android:text="@string/back" />
+
+    <!--设置下一关按钮的相对位置-->
+    <Button
+        android:id="@+id/next_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_klotski"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:onClick="next"
+        android:text="@string/next" />
+
+    <!--设置关卡名区域的相对位置-->
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="209dp"
-        android:layout_height="104dp"
+        android:id="@+id/level_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_klotski"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="0dp"
+        android:layout_toStartOf="@+id/next_btn"
+        android:layout_toLeftOf="@+id/next_btn"
+        android:layout_toEndOf="@+id/back_btn"
+        android:layout_toRightOf="@+id/back_btn"
+        android:gravity="center"
         android:lineSpacingExtra="12sp"
-        android:text="第四关：水泄不通"
+        android:text="@string/level_name_4"
         android:textSize="24sp"
-        android:textStyle="bold"
-        tools:text="第四关：水泄不通" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="78dp"
-        android:layout_height="36dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="40dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginBottom="73dp"
-        android:text="返回"
-        android:onClick="back"/>
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="74dp"
-        android:layout_height="37dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="-649dp"
-        android:layout_marginEnd="46dp"
-        android:layout_marginRight="46dp"
-        android:layout_marginBottom="14dp"
-        android:text="下一关"
-        android:onClick="next"/>
+        android:textStyle="bold" />
 </RelativeLayout>
