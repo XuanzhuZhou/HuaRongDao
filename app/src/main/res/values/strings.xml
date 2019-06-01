@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Huarongdao</string>
-    <string name="title_activity_level1">Level1Activity</string>
     <string name="back">返回</string>
     <string name="next">下一关</string>
     <string name="level_name_1">第一关：横刀立马</string>
