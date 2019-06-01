@@ -10,8 +10,8 @@
 
     <com.example.huarongdao.Klotski
         android:id="@+id/main_klotski"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="401dp"
+        android:layout_height="594dp"
         app:blockDrawable1x1="@mipmap/bing"
         app:blockDrawable1x2a="@mipmap/zhangfei"
         app:blockDrawable1x2b="@mipmap/zhaoyun"
@@ -19,6 +19,44 @@
         app:blockDrawable1x2d="@mipmap/huangzhong"
         app:blockDrawable2x1a="@mipmap/guanyu"
         app:blockDrawable2x2="@mipmap/caocao"
-        app:blockSpacing="3dp">
-    </com.example.huarongdao.Klotski>
+        app:blockSpacing="3dp"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="209dp"
+        android:layout_height="104dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:lineSpacingExtra="12sp"
+        android:text="第一关：横刀立马"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:text="第一关：横刀立马" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="78dp"
+        android:layout_height="36dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="73dp"
+        android:text="返回"
+        android:onClick="back"/>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="74dp"
+        android:layout_height="37dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="-649dp"
+        android:layout_marginEnd="46dp"
+        android:layout_marginRight="46dp"
+        android:layout_marginBottom="14dp"
+        android:text="下一关"
+        android:onClick="next"/>
 </RelativeLayout>

@@ -1,6 +1,8 @@
 package com.example.huarongdao;
 
 import android.content.Context;
+import android.content.DialogInterface;
+import android.support.v7.app.AlertDialog;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Paint;
@@ -15,7 +17,9 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
+import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -136,6 +140,17 @@ public class Klotski extends SurfaceView implements SurfaceHolder.Callback {
                 int newTop = Math.round((float) b.getRect().top / mCellHeight) * mCellHeight;
                 int newLeft = Math.round((float) b.getRect().left / mCellWidth) * mCellWidth;
                 b.getRect().offsetTo(newLeft, newTop);
+                //判断是否结束
+                if (touchedId==1 && newTop==765 && newLeft==255) {
+                    //游戏结束！
+                    L.i(this, "Game over!");
+                    AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+                    builder.setTitle("恭喜你！").setMessage("成功通关啦！").setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                        }
+                    }).show();
+                }
                 mDownX = 0;
                 mDownY = 0;
                 touchedId = -1;
@@ -172,6 +187,7 @@ public class Klotski extends SurfaceView implements SurfaceHolder.Callback {
         }
         mLastX = event.getX();
         mLastY = event.getY();
+        //判断是否游戏结束
         return true;
     }
 
@@ -322,7 +338,7 @@ public class Klotski extends SurfaceView implements SurfaceHolder.Callback {
                         block.getRect().top + spacing,
                         block.getRect().right - spacing,
                         block.getRect().bottom - spacing);
-                drawable.draw(canvas);//有点问题，没画出来，而且最后一闪而过是在哪里呢？这个可以调为显示吗？加上图片！
+                drawable.draw(canvas);
             }
         }
 

@@ -16,9 +16,6 @@ public class AboutActivity extends AppCompatActivity {
     }
 
     public void exit(View view) {
-//        Intent intent = new Intent();
-//        intent.setClass(AboutActivity.this,MainActivity.class);
-//        startActivity(intent);
         finish();
     }
 }
