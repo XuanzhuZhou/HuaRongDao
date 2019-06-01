@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Huarongdao</string>
     <string name="title_activity_level1">Level1Activity</string>
+    <string name="back">返回</string>
 </resources>
