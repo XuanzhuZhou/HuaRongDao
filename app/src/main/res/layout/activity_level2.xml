@@ -12,9 +12,12 @@
         android:id="@+id/main_klotski"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:blockDrawable1x1="@mipmap/bing2"
-        app:blockDrawable1x2a="#342187"
-        app:blockDrawable2x1a="@color/colorPrimary"
-        app:blockDrawable2x2="@color/colorAccent"
+        app:blockDrawable1x1="@mipmap/bing"
+        app:blockDrawable1x2a="@mipmap/zhaoyun"
+        app:blockDrawable1x2b="@mipmap/machao"
+        app:blockDrawable1x2c="@mipmap/huangzhong"
+        app:blockDrawable2x1a="@mipmap/guanyu"
+        app:blockDrawable2x1b="@mipmap/zhangfei"
+        app:blockDrawable2x2="@mipmap/caocao"
         app:blockSpacing="3dp" />
 </RelativeLayout>

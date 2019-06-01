@@ -12,20 +12,13 @@
         android:id="@+id/main_klotski"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:blockDrawable1x1="@color/colorPrimary"
-        app:blockDrawable1x2a="@color/colorAccent"
-        app:blockDrawable1x2b="@color/colorPrimaryDark"
-        app:blockDrawable1x2c="@color/design_default_color_primary"
-        app:blockDrawable1x2d="@color/design_default_color_primary_dark"
-        app:blockDrawable2x1a="@color/colora"
-        app:blockDrawable2x2="@color/colorb"
+        app:blockDrawable1x1="@mipmap/bing"
+        app:blockDrawable1x2a="@mipmap/zhangfei"
+        app:blockDrawable1x2b="@mipmap/zhaoyun"
+        app:blockDrawable1x2c="@mipmap/machao"
+        app:blockDrawable1x2d="@mipmap/huangzhong"
+        app:blockDrawable2x1a="@mipmap/guanyu"
+        app:blockDrawable2x2="@mipmap/caocao"
         app:blockSpacing="3dp">
     </com.example.huarongdao.Klotski>
 </RelativeLayout>
-    <!--app:blockDrawable1x1="@mipmap/bing"-->
-    <!--app:blockDrawable1x2a="@mipmap/zhangfei"-->
-    <!--app:blockDrawable1x2b="@mipmap/zhaoyun"-->
-    <!--app:blockDrawable1x2c="@mipmap/machao"-->
-    <!--app:blockDrawable1x2d="@mipmap/huangzhong"-->
-    <!--app:blockDrawable2x1a="@mipmap/guanyu"-->
-    <!--app:blockDrawable2x2="@mipmap/caocao"-->

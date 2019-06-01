@@ -1,25 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="10dp"
     tools:context=".Level4Activity">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="level4"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="level4" />
-</android.support.constraint.ConstraintLayout>
+    <com.example.huarongdao.Klotski
+        android:id="@+id/main_klotski"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:blockDrawable1x1="@mipmap/bing"
+        app:blockDrawable1x2a="@mipmap/huangzhong"
+        app:blockDrawable2x1a="@mipmap/guanyu"
+        app:blockDrawable2x1b="@mipmap/zhangfei"
+        app:blockDrawable2x1c="@mipmap/zhaoyun"
+        app:blockDrawable2x1d="@mipmap/machao"
+        app:blockDrawable2x2="@mipmap/caocao"
+        app:blockSpacing="3dp" />
+</RelativeLayout>
