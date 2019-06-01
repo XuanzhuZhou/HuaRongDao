@@ -36,8 +36,14 @@ public class Klotski extends SurfaceView implements SurfaceHolder.Callback {
 
     private float mBlockSpacing;
     private Drawable mDrawable1x1;
-    private Drawable mDrawable1x2;
-    private Drawable mDrawable2x1;
+    private Drawable mDrawable1x2a;
+    private Drawable mDrawable1x2b;
+    private Drawable mDrawable1x2c;
+    private Drawable mDrawable1x2d;
+    private Drawable mDrawable2x1a;
+    private Drawable mDrawable2x1b;
+    private Drawable mDrawable2x1c;
+    private Drawable mDrawable2x1d;
     private Drawable mDrawable2x2;
 
     public Klotski(Context context) {
@@ -61,8 +67,14 @@ public class Klotski extends SurfaceView implements SurfaceHolder.Callback {
         TypedArray ta = getContext().obtainStyledAttributes(attrs, R.styleable.Klotski);
         mBlockSpacing = ta.getDimension(R.styleable.Klotski_blockSpacing, Dimension.dp2px(getContext(), 3));
         mDrawable1x1 = ta.getDrawable(R.styleable.Klotski_blockDrawable1x1);
-        mDrawable1x2 = ta.getDrawable(R.styleable.Klotski_blockDrawable1x2);
-        mDrawable2x1 = ta.getDrawable(R.styleable.Klotski_blockDrawable2x1);
+        mDrawable1x2a = ta.getDrawable(R.styleable.Klotski_blockDrawable1x2a);
+        mDrawable1x2b = ta.getDrawable(R.styleable.Klotski_blockDrawable1x2b);
+        mDrawable1x2c = ta.getDrawable(R.styleable.Klotski_blockDrawable1x2c);
+        mDrawable1x2d = ta.getDrawable(R.styleable.Klotski_blockDrawable1x2d);
+        mDrawable2x1a = ta.getDrawable(R.styleable.Klotski_blockDrawable2x1a);
+        mDrawable2x1b = ta.getDrawable(R.styleable.Klotski_blockDrawable2x1b);
+        mDrawable2x1c = ta.getDrawable(R.styleable.Klotski_blockDrawable2x1c);
+        mDrawable2x1d = ta.getDrawable(R.styleable.Klotski_blockDrawable2x1d);
         mDrawable2x2 = ta.getDrawable(R.styleable.Klotski_blockDrawable2x2);
         ta.recycle();
     }
@@ -92,10 +104,10 @@ public class Klotski extends SurfaceView implements SurfaceHolder.Callback {
 
         Log.i(TAG, "高度调整后 height -> " + params.height + " width -> " + params.width);
 
-        mCellWidth = (mWidth - getPaddingLeft() - getPaddingRight()) / 4;
-        mCellHeight = (mHeight - getPaddingTop() - getPaddingBottom()) / 5;
-
-        mRect = new Rect(0, 0, mWidth - getPaddingLeft() - getPaddingRight(), mHeight - getPaddingTop() - getPaddingBottom());
+        mCellWidth = (params.width - getPaddingLeft() - getPaddingRight()) / 4;
+        mCellHeight = (params.height - getPaddingTop() - getPaddingBottom()) / 5;
+        Log.i(TAG, "hhhhhhhh高度调整后 height -> " + mCellHeight + " width -> " + mCellWidth);
+        mRect = new Rect(0, 0, params.width - getPaddingLeft() - getPaddingRight(), params.height - getPaddingTop() - getPaddingBottom());
 
         updateBlocks();
     }
@@ -230,10 +242,22 @@ public class Klotski extends SurfaceView implements SurfaceHolder.Callback {
     protected Drawable resolveDrawable(Block.Type type) {
         if (type == Block.Type.RECT_1x1) {
             return mDrawable1x1;
-        } else if (type == Block.Type.RECT_1x2) {
-            return mDrawable1x2;
-        } else if (type == Block.Type.RECT_2x1) {
-            return mDrawable2x1;
+        } else if (type == Block.Type.RECT_1x2a) {
+            return mDrawable1x2a;
+        } else if (type == Block.Type.RECT_1x2b) {
+            return mDrawable1x2b;
+        } else if (type == Block.Type.RECT_1x2c) {
+            return mDrawable1x2c;
+        } else if (type == Block.Type.RECT_1x2d) {
+            return mDrawable1x2d;
+        } else if (type == Block.Type.RECT_2x1a) {
+            return mDrawable2x1a;
+        } else if (type == Block.Type.RECT_2x1b) {
+            return mDrawable2x1b;
+        } else if (type == Block.Type.RECT_2x1c) {
+            return mDrawable2x1c;
+        } else if (type == Block.Type.RECT_2x1d) {
+            return mDrawable2x1d;
         } else if (type == Block.Type.RECT_2x2) {
             return mDrawable2x2;
         }
@@ -291,16 +315,17 @@ public class Klotski extends SurfaceView implements SurfaceHolder.Callback {
                 return;
             Paint paint = new Paint();
             paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.CLEAR));
-            canvas.drawPaint(paint);
+            canvas.drawPaint(paint);//清空画布
             for (Block block : mBlocks) {
                 Drawable drawable = block.getDrawable();
                 drawable.setBounds(block.getRect().left + spacing,
                         block.getRect().top + spacing,
                         block.getRect().right - spacing,
                         block.getRect().bottom - spacing);
-                drawable.draw(canvas);
+                drawable.draw(canvas);//有点问题，没画出来，而且最后一闪而过是在哪里呢？这个可以调为显示吗？加上图片！
             }
         }
+
     }
 }
 

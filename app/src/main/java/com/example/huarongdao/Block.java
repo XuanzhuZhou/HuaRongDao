@@ -42,9 +42,15 @@ public class Block {
     }
     public enum Type {
         RECT_1x1(1, 1, 1),
-        RECT_1x2(2, 1, 2),
-        RECT_2x1(3, 2, 1),
-        RECT_2x2(4, 2, 2);
+        RECT_1x2a(2, 1, 2),
+        RECT_1x2b(3, 1, 2),
+        RECT_1x2c(4, 1, 2),
+        RECT_1x2d(5, 1, 2),
+        RECT_2x1a(6, 2, 1),
+        RECT_2x1b(7, 2, 1),
+        RECT_2x1c(8, 2, 1),
+        RECT_2x1d(9, 2, 1),
+        RECT_2x2(10, 2, 2);
         int value;
         int width;
         int height;
@@ -62,7 +68,7 @@ public class Block {
         public int height() {
             return height;
         }
-        public static Type parse(@IntRange(from = 1, to = 4) int type) {
+        public static Type parse(@IntRange(from = 1, to = 10 ) int type) {//注解，限定值为int
             return values()[type - 1];
         }
     }

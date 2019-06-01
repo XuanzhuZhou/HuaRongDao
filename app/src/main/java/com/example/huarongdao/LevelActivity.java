@@ -32,13 +32,13 @@ public class LevelActivity extends AppCompatActivity {
 
     public void gotolevel3(View view) {
         Intent intent = new Intent();
-//        intent.setClass(LevelActivity.this,Level3Activity.class);
-//        startActivity(intent);
+        intent.setClass(LevelActivity.this,Level3Activity.class);
+        startActivity(intent);
     }
 
     public void gotolevel4(View view) {
         Intent intent = new Intent();
-//        intent.setClass(LevelActivity.this,Level4Activity.class);
-//        startActivity(intent);
+        intent.setClass(LevelActivity.this,Level4Activity.class);
+        startActivity(intent);
     }
 }

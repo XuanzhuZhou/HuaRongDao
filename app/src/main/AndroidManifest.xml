@@ -11,10 +11,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".Level4Activity"></activity>
+        <activity android:name=".Level3Activity" />
         <activity
             android:name=".Level1Activity"
             android:label="@string/title_activity_level1"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Level2Activity" />
         <activity android:name=".level1" />
         <activity android:name=".AboutActivity" />
