@@ -2,4 +2,9 @@
     <string name="app_name">Huarongdao</string>
     <string name="title_activity_level1">Level1Activity</string>
     <string name="back">返回</string>
+    <string name="next">下一关</string>
+    <string name="level_name_1">第一关：横刀立马</string>
+    <string name="level_name_2">第二关：层拦叠嶂</string>
+    <string name="level_name_3">第三关：层层设防</string>
+    <string name="level_name_4">第四关：水泄不通</string>
 </resources>
