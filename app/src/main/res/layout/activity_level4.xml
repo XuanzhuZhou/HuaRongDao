@@ -53,8 +53,11 @@
         android:layout_toEndOf="@+id/back_btn"
         android:layout_toRightOf="@+id/back_btn"
         android:gravity="center"
-        android:lineSpacingExtra="12sp"
         android:text="@string/level_name_4"
-        android:textSize="24sp"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="5sp"
+        android:autoSizeMaxTextSize="80sp"
+        android:autoSizeStepGranularity="1sp"
+        android:maxLines="1"
         android:textStyle="bold" />
 </RelativeLayout>
