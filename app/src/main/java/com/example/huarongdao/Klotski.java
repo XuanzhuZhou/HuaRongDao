@@ -187,7 +187,6 @@ public class Klotski extends SurfaceView implements SurfaceHolder.Callback {
         }
         mLastX = event.getX();
         mLastY = event.getY();
-        //判断是否游戏结束
         return true;
     }
 

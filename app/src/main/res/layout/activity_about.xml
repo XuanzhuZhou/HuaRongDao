@@ -6,10 +6,22 @@
     android:layout_height="match_parent"
     tools:context=".AboutActivity">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="432dp"
+        android:layout_height="788dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.859"
+        app:srcCompat="@mipmap/bg2" />
+
     <ImageButton
         android:id="@+id/back"
-        android:layout_width="93dp"
-        android:layout_height="94dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginBottom="8dp"
@@ -17,4 +29,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="?attr/actionModeCloseDrawable"
         android:onClick="exit"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="326dp"
+        android:layout_height="563dp"
+        android:text="@string/describe"
+        tools:layout_editor_absoluteX="39dp"
+        tools:layout_editor_absoluteY="39dp" />
 </android.support.constraint.ConstraintLayout>
