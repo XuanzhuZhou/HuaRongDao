@@ -25,6 +25,8 @@ import java.util.List;
 
 public class Klotski extends SurfaceView implements SurfaceHolder.Callback {
 
+    private int whichlevel;
+
     private final String TAG = getClass().getSimpleName();
 
     private SurfaceHolder mSurfaceHolder;
@@ -122,6 +124,9 @@ public class Klotski extends SurfaceView implements SurfaceHolder.Callback {
     private float mLastX = 0;
     private float mLastY = 0;
 
+    public void setlevel(int whichlevels) {
+        whichlevel=whichlevels;
+    }
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         switch (event.getAction()) {
@@ -144,6 +149,7 @@ public class Klotski extends SurfaceView implements SurfaceHolder.Callback {
                 if (touchedId==1 && newTop==765 && newLeft==255) {
                     //游戏结束！
                     L.i(this, "Game over!");
+                    MainActivity.levels[whichlevel-1]=true;
                     AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
                     builder.setTitle("恭喜你！").setMessage("成功通关啦！").setPositiveButton("ok", new DialogInterface.OnClickListener() {
                         @Override
