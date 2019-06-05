@@ -11,13 +11,13 @@
         android:id="@+id/main_klotski"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:blockDrawable1x1="@mipmap/bing"
-        app:blockDrawable1x2a="@mipmap/zhangfei"
-        app:blockDrawable1x2b="@mipmap/zhaoyun"
-        app:blockDrawable1x2c="@mipmap/machao"
-        app:blockDrawable1x2d="@mipmap/huangzhong"
-        app:blockDrawable2x1a="@mipmap/guanyu"
-        app:blockDrawable2x2="@mipmap/caocao"
+        app:blockDrawable1x1="@mipmap/bing3"
+        app:blockDrawable1x2a="@mipmap/zhangfei2"
+        app:blockDrawable1x2b="@mipmap/zhaoyun2"
+        app:blockDrawable1x2c="@mipmap/machao2"
+        app:blockDrawable1x2d="@mipmap/huangzhong2"
+        app:blockDrawable2x1a="@mipmap/guanyu2"
+        app:blockDrawable2x2="@mipmap/caocao2"
         app:blockSpacing="3dp" />
 
 

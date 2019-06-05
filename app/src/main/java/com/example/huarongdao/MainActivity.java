@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-    public static boolean levels[] = {false,false,false,false};
+    public static boolean levels[] = {true,true,true,true};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
