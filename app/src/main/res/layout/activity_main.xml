@@ -20,8 +20,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat"
         app:layout_constraintBottom_toTopOf="@+id/about_btn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:text="开始游戏" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/about_btn"
@@ -36,8 +35,7 @@
         android:onClick="chooseabout"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:text="关于" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -73,14 +71,15 @@
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="40dp"
         android:layout_marginRight="40dp"
+        android:layout_marginBottom="76dp"
         android:lineSpacingExtra="8sp"
         android:text="开始游戏"
         android:textSize="18sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
         app:layout_constraintEnd_toStartOf="@+id/level_btn"
-        app:layout_constraintHorizontal_bias="0.74"
+        app:layout_constraintHorizontal_bias="0.534"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="559dp"
         tools:text="开始游戏" />
 
     <TextView
@@ -91,14 +90,15 @@
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="80dp"
         android:layout_marginRight="80dp"
+        android:layout_marginBottom="40dp"
         android:lineSpacingExtra="8sp"
         android:text="关于"
         android:textSize="18sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/about_btn"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="661dp"
         tools:text="关于" />
 
 

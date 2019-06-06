@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10dp"
-    tools:context=".Level3Activity">
+    tools:context=".Level3Activity"
+    android:background="@drawable/backimage">
 
     <com.example.huarongdao.Klotski
         android:id="@+id/main_klotski"
@@ -23,24 +24,24 @@
     <!--设置返回按钮的相对位置-->
     <Button
         android:id="@+id/back_btn"
-        android:layout_width="wrap_content"
+        android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
         android:onClick="back"
-        android:text="@string/back" />
+        android:background="@drawable/cry" />
 
     <!--设置下一关按钮的相对位置-->
     <Button
         android:id="@+id/next_btn"
-        android:layout_width="wrap_content"
+        android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:onClick="next"
-        android:text="@string/next" />
+        android:background="@drawable/back_icon" />
 
     <!--设置关卡名区域的相对位置-->
     <TextView
