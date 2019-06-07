@@ -6,36 +6,36 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/level_btn"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginBottom="18dp"
-        android:background="@drawable/btn"
-        android:onClick="chooselevel"
-        android:textAppearance="@style/TextAppearance.AppCompat"
-        app:layout_constraintBottom_toTopOf="@+id/about_btn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+    <!--<Button-->
+    <!--android:id="@+id/level_btn"-->
+    <!--android:layout_width="80dp"-->
+    <!--android:layout_height="80dp"-->
+    <!--android:layout_marginStart="5dp"-->
+    <!--android:layout_marginLeft="5dp"-->
+    <!--android:layout_marginEnd="5dp"-->
+    <!--android:layout_marginRight="5dp"-->
+    <!--android:layout_marginBottom="18dp"-->
+    <!--android:background="@drawable/btn"-->
+    <!--android:onClick="chooselevel"-->
+    <!--android:textAppearance="@style/TextAppearance.AppCompat"-->
+    <!--app:layout_constraintBottom_toTopOf="@+id/about_btn"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintStart_toStartOf="parent" />-->
 
-    <Button
-        android:id="@+id/about_btn"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="18dp"
-        android:background="@drawable/aboutbtn"
-        android:onClick="chooseabout"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+    <!--<Button-->
+        <!--android:id="@+id/about_btn"-->
+        <!--android:layout_width="80dp"-->
+        <!--android:layout_height="80dp"-->
+        <!--android:layout_marginStart="8dp"-->
+        <!--android:layout_marginLeft="8dp"-->
+        <!--android:layout_marginEnd="8dp"-->
+        <!--android:layout_marginRight="8dp"-->
+        <!--android:layout_marginBottom="18dp"-->
+        <!--android:background="@drawable/aboutbtn"-->
+        <!--android:onClick="chooseabout"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintStart_toStartOf="parent" />-->
 
     <ImageView
         android:id="@+id/background_pic"
@@ -69,17 +69,19 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:lineSpacingExtra="8sp"
+        android:onClick="chooselevel"
         android:text="开始游戏"
-        android:textSize="18sp"
+        android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/title"
         app:layout_constraintCircle="@+id/title"
         app:layout_constraintCircleAngle="180"
         app:layout_constraintCircleRadius="150dp"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintLeft_toLeftOf="@+id/title"
         tools:text="开始游戏" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/about"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -89,12 +91,16 @@
         android:layout_marginBottom="40dp"
         android:lineSpacingExtra="8sp"
         android:text="关于"
-        android:textSize="18sp"
+        android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/about_btn"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintCircle="@+id/start_game"
+        app:layout_constraintCircleAngle="180"
+        app:layout_constraintCircleRadius="60dp"
+        app:layout_constraintTop_toBottomOf="@+id/start_game"
+        app:layout_constraintLeft_toLeftOf="@+id/start_game"
+
+
         tools:text="关于" />
 
 
