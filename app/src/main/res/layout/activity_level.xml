@@ -26,7 +26,7 @@
     <!--level放在左上角，固定marginLeft和marginTop，然后以此为基准使用约束布局-->
     <TextView
         android:id="@+id/level1text"
-        android:layout_width="64dp"
+        android:layout_width="@dimen/level_text_width"
         android:layout_height="64dp"
         android:layout_marginStart="84dp"
         android:layout_marginLeft="84dp"
@@ -58,7 +58,7 @@
     <!--level2-->
     <TextView
         android:id="@+id/level2text"
-        android:layout_width="64dp"
+        android:layout_width="@dimen/level_text_width"
         android:layout_height="64dp"
         android:layout_marginTop="32dp"
         android:background="@color/colora"
@@ -83,7 +83,7 @@
     <!--level3-->
     <TextView
         android:id="@+id/level3text"
-        android:layout_width="64dp"
+        android:layout_width="@dimen/level_text_width"
         android:layout_height="64dp"
         android:layout_marginTop="32dp"
         android:background="@color/colora"
@@ -108,7 +108,7 @@
     <!--level4-->
     <TextView
         android:id="@+id/level4text"
-        android:layout_width="64dp"
+        android:layout_width="@dimen/level_text_width"
         android:layout_height="64dp"
         android:layout_marginTop="32dp"
         android:background="@color/colora"
