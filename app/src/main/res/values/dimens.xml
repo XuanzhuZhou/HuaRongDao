@@ -2,4 +2,6 @@
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="level_text_width">192dp</dimen>
     <dimen name="level_text_size">24sp</dimen>
+    <dimen name="level_text_size_big">30sp</dimen>
+
 </resources>

@@ -44,10 +44,12 @@ public class LevelActivity extends AppCompatActivity {
             public boolean onTouch(View v, MotionEvent event) {
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
-                        levelText.setTextSize(levelText.getTextSize()+2);
+                        int colorGrey = R.color.colorGrey;
+                        levelText.setTextColor(getResources().getColor(colorGrey));
                         break;
                     case MotionEvent.ACTION_UP:
-                        levelText.setTextSize(levelText.getTextSize()-2);
+                        int colorBlack = R.color.colorb;
+                        levelText.setTextColor(getResources().getColor(colorBlack));
                         break;
                 }
                 return false;
