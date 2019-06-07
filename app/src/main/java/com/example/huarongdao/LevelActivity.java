@@ -1,39 +1,71 @@
 package com.example.huarongdao;
 
+import android.annotation.SuppressLint;
 import android.arch.lifecycle.AndroidViewModel;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 public class LevelActivity extends AppCompatActivity {
 
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_level);
-        ImageButton level1 = findViewById(R.id.level1);
+        final ImageButton level1 = findViewById(R.id.level1);
         ImageButton level2 = findViewById(R.id.level2);
         ImageButton level3 = findViewById(R.id.level3);
         ImageButton level4 = findViewById(R.id.level4);
+        final TextView levelText1 = findViewById(R.id.level1text);
+        TextView levelText2 = findViewById(R.id.level2text);
+        TextView levelText3 = findViewById(R.id.level3text);
+        TextView levelText4 = findViewById(R.id.level4text);
+        setStar(level1, 0, levelText1);
+        setStar(level2, 1, levelText2);
+        setStar(level3, 2, levelText3);
+        setStar(level4, 3, levelText4);
 
-        setStar(level1,0);
-        setStar(level2,1);
-        setStar(level3,2);
-        setStar(level4,3);
+        setLevelTextAnimation(levelText1);
+        setLevelTextAnimation(levelText2);
+        setLevelTextAnimation(levelText3);
+        setLevelTextAnimation(levelText4);
+
     }
+
+    @SuppressLint("ClickableViewAccessibility")
+    private void setLevelTextAnimation(final TextView levelText) {
+        levelText.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        levelText.setTextSize(levelText.getTextSize()+2);
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        levelText.setTextSize(levelText.getTextSize()-2);
+                        break;
+                }
+                return false;
+            }
+        });
+    }
+
 
     /**
      * 用来设置关卡的小星星
+     *
      * @param levelBtn
      * @param i
      */
-    private void setStar(ImageButton levelBtn,int i) {
-        if(MainActivity.levels[i]){
+    private void setStar(ImageButton levelBtn, int i, TextView levelText) {
+        if (MainActivity.levels[i]) {
             levelBtn.setImageResource(android.R.drawable.star_big_on);
-        }
-        else{
+        } else {
             levelBtn.setImageResource(android.R.drawable.star_big_off);
         }
     }
