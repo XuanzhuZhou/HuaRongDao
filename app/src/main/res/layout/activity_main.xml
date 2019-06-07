@@ -38,7 +38,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/background_pic"
         android:layout_width="432dp"
         android:layout_height="788dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -46,11 +46,11 @@
         app:layout_constraintHorizontal_bias="0.523"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.859"
+        app:layout_constraintVertical_bias="0.877"
         app:srcCompat="@mipmap/bg2" />
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -64,22 +64,18 @@
         app:srcCompat="@mipmap/title" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/start_game"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginBottom="76dp"
+        android:gravity="center"
         android:lineSpacingExtra="8sp"
         android:text="开始游戏"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView3"
-        app:layout_constraintEnd_toStartOf="@+id/level_btn"
-        app:layout_constraintHorizontal_bias="0.534"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintCircle="@+id/title"
+        app:layout_constraintCircleAngle="180"
+        app:layout_constraintCircleRadius="150dp"
         tools:text="开始游戏" />
 
     <TextView
