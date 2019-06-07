@@ -16,16 +16,16 @@
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginBottom="8dp"
+        android:background="@drawable/btn"
         android:onClick="exit"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:background="@drawable/btn"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
 
     <!--level文本-->
     <!--level放在左上角，固定marginLeft和marginTop，然后以此为基准使用约束布局-->
     <TextView
-        android:id="@+id/level4text"
+        android:id="@+id/level1text"
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:layout_marginStart="84dp"
@@ -33,58 +33,29 @@
         android:layout_marginTop="116dp"
         android:background="@color/colora"
         android:gravity="center"
-        android:text="level4"
+        android:text="level1"
         android:textAppearance="@style/TextAppearance.AppCompat"
         android:textSize="18sp"
         android:textStyle="bold"
         app:fontFamily="casual"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="level4" />
+        tools:text="level1" />
 
     <!--level按钮-->
     <!--位置约束在level文本的右边-->
     <ImageButton
-        android:id="@+id/level4"
+        android:id="@+id/level1"
         android:layout_width="64dp"
         android:layout_height="64dp"
-        android:layout_marginLeft="68dp"
-        android:onClick="gotolevel4"
-        app:layout_constraintLeft_toRightOf="@+id/level4text"
-        app:layout_constraintTop_toTopOf="@+id/level4text"
+        android:onClick="gotolevel1"
+        app:layout_constraintLeft_toRightOf="@+id/level1text"
+        app:layout_constraintTop_toTopOf="@+id/level1text"
         app:srcCompat="@android:drawable/star_off" />
 
 
     <!--以上就是基准，不断开始迭代-->
     <!--level2-->
-    <TextView
-        android:id="@+id/level3text"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:layout_marginTop="32dp"
-        android:background="@color/colora"
-        android:gravity="center"
-        android:text="level3"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:fontFamily="casual"
-        app:layout_constraintStart_toStartOf="@+id/level4text"
-        app:layout_constraintTop_toBottomOf="@+id/level4text"
-        tools:text="level3" />
-
-    <ImageButton
-        android:id="@+id/level3"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginLeft="68dp"
-        android:layout_marginTop="8dp"
-        android:onClick="gotolevel3"
-        app:layout_constraintStart_toEndOf="@+id/level3text"
-        app:layout_constraintTop_toTopOf="@+id/level3text"
-        app:srcCompat="@android:drawable/star_off" />
-
-    <!--level3-->
     <TextView
         android:id="@+id/level2text"
         android:layout_width="64dp"
@@ -96,46 +67,67 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:fontFamily="casual"
-        app:layout_constraintStart_toStartOf="@+id/level3text"
-        app:layout_constraintTop_toBottomOf="@+id/level3text"
+        app:layout_constraintStart_toStartOf="@+id/level1text"
+        app:layout_constraintTop_toBottomOf="@+id/level1text"
         tools:text="level2" />
 
     <ImageButton
         android:id="@+id/level2"
         android:layout_width="64dp"
         android:layout_height="64dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginLeft="68dp"
         android:onClick="gotolevel2"
         app:layout_constraintStart_toEndOf="@+id/level2text"
         app:layout_constraintTop_toTopOf="@+id/level2text"
         app:srcCompat="@android:drawable/star_off" />
 
-    <!--level4-->
+    <!--level3-->
     <TextView
-        android:id="@+id/level1text"
+        android:id="@+id/level3text"
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:layout_marginTop="32dp"
         android:background="@color/colora"
         android:gravity="center"
-        android:text="level1"
+        android:text="level3"
         android:textSize="18sp"
         android:textStyle="bold"
         app:fontFamily="casual"
         app:layout_constraintStart_toStartOf="@+id/level2text"
         app:layout_constraintTop_toBottomOf="@+id/level2text"
-        tools:text="level1" />
+        tools:text="level3" />
 
     <ImageButton
-        android:id="@+id/level1"
+        android:id="@+id/level3"
         android:layout_width="64dp"
         android:layout_height="64dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginLeft="68dp"
-        android:onClick="gotolevel1"
-        app:layout_constraintStart_toEndOf="@+id/level1text"
-        app:layout_constraintTop_toTopOf="@+id/level1text"
+        android:onClick="gotolevel3"
+        app:layout_constraintStart_toEndOf="@+id/level3text"
+        app:layout_constraintTop_toTopOf="@+id/level3text"
+        app:srcCompat="@android:drawable/star_off" />
+
+    <!--level4-->
+    <TextView
+        android:id="@+id/level4text"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/colora"
+        android:gravity="center"
+        android:text="level4"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:fontFamily="casual"
+        app:layout_constraintStart_toStartOf="@+id/level3text"
+        app:layout_constraintTop_toBottomOf="@+id/level3text"
+        tools:text="level4" />
+
+    <ImageButton
+        android:id="@+id/level4"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:onClick="gotolevel4"
+        app:layout_constraintStart_toEndOf="@+id/level4text"
+        app:layout_constraintTop_toTopOf="@+id/level4text"
         app:srcCompat="@android:drawable/star_off" />
 
 </android.support.constraint.ConstraintLayout>
