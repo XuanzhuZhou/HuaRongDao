@@ -25,7 +25,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         final TextView startGame = findViewById(R.id.start_game);
         final Button levelBtn = findViewById(R.id.level_btn);
-        TextView aboutGame = findViewById(R.id.about);
+        final TextView aboutGame = findViewById(R.id.about);
+        final Button aboutBtn = findViewById(R.id.about_btn);
         startGame.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -37,6 +38,22 @@ public class MainActivity extends AppCompatActivity {
                     case MotionEvent.ACTION_UP:
                         levelBtn.setBackgroundResource(R.drawable.back_icon);
                         startGame.setTextColor(getResources().getColor(R.color.colora));
+                        break;
+                }
+                return false;
+            }
+        });
+        aboutGame.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        aboutBtn.setBackgroundResource(R.drawable.angry);
+                        aboutGame.setTextColor(getResources().getColor(R.color.colorGrey));
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        aboutBtn.setBackgroundResource(R.drawable.cry);
+                        aboutGame.setTextColor(getResources().getColor(R.color.colora));
                         break;
                 }
                 return false;
