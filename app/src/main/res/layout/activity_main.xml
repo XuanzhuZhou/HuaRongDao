@@ -6,37 +6,31 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <!--感觉首页加上图会有些突兀-->
-    <!--<Button-->
-    <!--android:id="@+id/level_btn"-->
-    <!--android:layout_width="80dp"-->
-    <!--android:layout_height="80dp"-->
-    <!--android:layout_marginStart="5dp"-->
-    <!--android:layout_marginLeft="5dp"-->
-    <!--android:layout_marginEnd="5dp"-->
-    <!--android:layout_marginRight="5dp"-->
-    <!--android:layout_marginBottom="18dp"-->
-    <!--android:background="@drawable/btn"-->
-    <!--android:onClick="chooselevel"-->
-    <!--android:textAppearance="@style/TextAppearance.AppCompat"-->
-    <!--app:layout_constraintBottom_toTopOf="@+id/about_btn"-->
-    <!--app:layout_constraintEnd_toEndOf="parent"-->
-    <!--app:layout_constraintStart_toStartOf="parent" />-->
+    <Button
+        android:id="@+id/level_btn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/btn"
+        android:onClick="chooselevel"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        app:layout_constraintBottom_toBottomOf="@+id/start_game"
+        app:layout_constraintRight_toLeftOf="@+id/start_game"
 
-    <!--<Button-->
-    <!--android:id="@+id/about_btn"-->
-    <!--android:layout_width="80dp"-->
-    <!--android:layout_height="80dp"-->
-    <!--android:layout_marginStart="8dp"-->
-    <!--android:layout_marginLeft="8dp"-->
-    <!--android:layout_marginEnd="8dp"-->
-    <!--android:layout_marginRight="8dp"-->
-    <!--android:layout_marginBottom="18dp"-->
-    <!--android:background="@drawable/aboutbtn"-->
-    <!--android:onClick="chooseabout"-->
-    <!--app:layout_constraintBottom_toBottomOf="parent"-->
-    <!--app:layout_constraintEnd_toEndOf="parent"-->
-    <!--app:layout_constraintStart_toStartOf="parent" />-->
+        />
+
+    <Button
+        android:id="@+id/about_btn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/aboutbtn"
+        android:onClick="chooseabout"
+        app:layout_constraintBottom_toBottomOf="@+id/about"
+        app:layout_constraintLeft_toLeftOf="@+id/level_btn"
+        />
 
     <ImageView
         android:id="@+id/background_pic"
