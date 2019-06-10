@@ -9,6 +9,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class LevelActivity extends AppCompatActivity {
 
@@ -21,19 +22,27 @@ public class LevelActivity extends AppCompatActivity {
         ImageButton level2 = findViewById(R.id.level2);
         ImageButton level3 = findViewById(R.id.level3);
         ImageButton level4 = findViewById(R.id.level4);
+        ImageButton level5 = findViewById(R.id.level5);
+        ImageButton level6 = findViewById(R.id.level6);
         final TextView levelText1 = findViewById(R.id.level1text);
         TextView levelText2 = findViewById(R.id.level2text);
         TextView levelText3 = findViewById(R.id.level3text);
         TextView levelText4 = findViewById(R.id.level4text);
+        TextView levelText5 = findViewById(R.id.level5text);
+        TextView levelText6 = findViewById(R.id.level6text);
         setStar(level1, 0, levelText1);
         setStar(level2, 1, levelText2);
         setStar(level3, 2, levelText3);
         setStar(level4, 3, levelText4);
+        setStar(level5, 4, levelText5);
+        setStar(level6, 5, levelText6);
 
         setLevelTextAnimation(levelText1);
         setLevelTextAnimation(levelText2);
         setLevelTextAnimation(levelText3);
         setLevelTextAnimation(levelText4);
+        setLevelTextAnimation(levelText5);
+        setLevelTextAnimation(levelText6);
 
     }
 
@@ -83,20 +92,55 @@ public class LevelActivity extends AppCompatActivity {
     }
 
     public void gotolevel2(View view) {
-        Intent intent = new Intent();
-        intent.setClass(LevelActivity.this, Level2Activity.class);
-        startActivity(intent);
+        if (MainActivity.levels[1]==true) {
+            Intent intent = new Intent();
+            intent.setClass(LevelActivity.this, Level2Activity.class);
+            startActivity(intent);
+            finish();
+        } else {
+            Toast.makeText(getApplicationContext(),"得先通过基础关卡噢",Toast.LENGTH_LONG).show();
+        }
     }
 
     public void gotolevel3(View view) {
-        Intent intent = new Intent();
-        intent.setClass(LevelActivity.this, Level3Activity.class);
-        startActivity(intent);
+        if (MainActivity.levels[2]==true) {
+            Intent intent = new Intent();
+            intent.setClass(LevelActivity.this, Level3Activity.class);
+            startActivity(intent);
+            finish();
+        } else {
+            Toast.makeText(getApplicationContext(),"得先通过基础关卡噢",Toast.LENGTH_LONG).show();
+        }
     }
 
     public void gotolevel4(View view) {
-        Intent intent = new Intent();
-        intent.setClass(LevelActivity.this, Level4Activity.class);
-        startActivity(intent);
+        if (MainActivity.levels[3]==true) {
+            Intent intent = new Intent();
+            intent.setClass(LevelActivity.this, Level4Activity.class);
+            startActivity(intent);
+            finish();
+        } else {
+            Toast.makeText(getApplicationContext(),"得先通过基础关卡噢",Toast.LENGTH_LONG).show();
+        }
+    }
+    public void gotolevel5(View view) {
+        if (MainActivity.levels[4]==true) {
+            Intent intent = new Intent();
+            intent.setClass(LevelActivity.this, Level5Activity.class);
+            startActivity(intent);
+            finish();
+        } else {
+            Toast.makeText(getApplicationContext(),"得先通过基础关卡噢",Toast.LENGTH_LONG).show();
+        }
+    }
+    public void gotolevel6(View view) {
+        if (MainActivity.levels[5]==true) {
+            Intent intent = new Intent();
+            intent.setClass(LevelActivity.this, Level5Activity.class);
+            startActivity(intent);
+            finish();
+        } else {
+            Toast.makeText(getApplicationContext(),"得先通过基础关卡噢",Toast.LENGTH_LONG).show();
+        }
     }
 }

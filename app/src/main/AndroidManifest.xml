@@ -11,6 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".Level6Activity"></activity>
+        <activity android:name=".Level5Activity" />
         <activity
             android:name=".Level1Activity"
             android:theme="@style/AppTheme.NoActionBar" />

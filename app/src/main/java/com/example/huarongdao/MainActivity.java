@@ -15,7 +15,7 @@ import android.widget.TextView;
 import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
-    public static boolean levels[] = {false,false,false,false};
+    public static boolean levels[] = {false,false,false,false,false,false};
 
     @SuppressLint("ClickableViewAccessibility")
     @Override
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case MotionEvent.ACTION_UP:
                         levelBtn.setBackgroundResource(R.drawable.back_icon);
-                        startGame.setTextColor(getResources().getColor(R.color.colora));
+                        startGame.setTextColor(getResources().getColor(R.color.colorb));
                         break;
                 }
                 return false;
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case MotionEvent.ACTION_UP:
                         aboutBtn.setBackgroundResource(R.drawable.cry);
-                        aboutGame.setTextColor(getResources().getColor(R.color.colora));
+                        aboutGame.setTextColor(getResources().getColor(R.color.colorb));
                         break;
                 }
                 return false;

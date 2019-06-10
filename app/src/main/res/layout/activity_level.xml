@@ -26,11 +26,11 @@
     <!--level放在左上角，固定marginLeft和marginTop，然后以此为基准使用约束布局-->
     <TextView
         android:id="@+id/level1text"
-        android:layout_width="@dimen/level_text_width"
+        android:layout_width="192dp"
         android:layout_height="64dp"
-        android:layout_marginStart="84dp"
-        android:layout_marginLeft="84dp"
-        android:layout_marginTop="116dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginLeft="108dp"
+        android:layout_marginTop="52dp"
         android:background="@color/colora"
         android:gravity="center"
         android:onClick="gotolevel1"
@@ -59,7 +59,7 @@
     <!--level2-->
     <TextView
         android:id="@+id/level2text"
-        android:layout_width="@dimen/level_text_width"
+        android:layout_width="192dp"
         android:layout_height="64dp"
         android:layout_marginTop="32dp"
         android:background="@color/colora"
@@ -85,16 +85,16 @@
     <!--level3-->
     <TextView
         android:id="@+id/level3text"
-        android:layout_width="@dimen/level_text_width"
+        android:layout_width="192dp"
         android:layout_height="64dp"
         android:layout_marginTop="32dp"
         android:background="@color/colora"
         android:gravity="center"
+        android:onClick="gotolevel3"
         android:text="level3"
-        android:textSize="@dimen/level_text_size"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:fontFamily="casual"
-        android:onClick="gotolevel3"
         app:layout_constraintStart_toStartOf="@+id/level2text"
         app:layout_constraintTop_toBottomOf="@+id/level2text"
         tools:text="level3" />
@@ -111,7 +111,7 @@
     <!--level4-->
     <TextView
         android:id="@+id/level4text"
-        android:layout_width="@dimen/level_text_width"
+        android:layout_width="192dp"
         android:layout_height="64dp"
         android:layout_marginTop="32dp"
         android:background="@color/colora"
@@ -132,6 +132,58 @@
         android:onClick="gotolevel4"
         app:layout_constraintStart_toEndOf="@+id/level4text"
         app:layout_constraintTop_toTopOf="@+id/level4text"
+        app:srcCompat="@android:drawable/star_off" />
+
+    <!--level5-->
+    <TextView
+        android:id="@+id/level5text"
+        android:layout_width="192dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/colora"
+        android:gravity="center"
+        android:onClick="gotolevel5"
+        android:text="level5"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:fontFamily="casual"
+        app:layout_constraintStart_toStartOf="@+id/level4text"
+        app:layout_constraintTop_toBottomOf="@+id/level4text"
+        tools:text="level5" />
+
+    <ImageButton
+        android:id="@+id/level5"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:onClick="gotolevel5"
+        app:layout_constraintStart_toEndOf="@+id/level4text"
+        app:layout_constraintTop_toTopOf="@+id/level4text"
+        app:srcCompat="@android:drawable/star_off" />
+
+    <!--level6-->
+    <TextView
+        android:id="@+id/level6text"
+        android:layout_width="192dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/colora"
+        android:gravity="center"
+        android:onClick="gotolevel6"
+        android:text="level6"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:fontFamily="casual"
+        app:layout_constraintStart_toStartOf="@+id/level5text"
+        app:layout_constraintTop_toBottomOf="@+id/level5text"
+        tools:text="level6" />
+
+    <ImageButton
+        android:id="@+id/level6"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:onClick="gotolevel6"
+        app:layout_constraintStart_toEndOf="@+id/level5text"
+        app:layout_constraintTop_toTopOf="@+id/level5text"
         app:srcCompat="@android:drawable/star_off" />
 
 </android.support.constraint.ConstraintLayout>
