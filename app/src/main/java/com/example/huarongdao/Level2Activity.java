@@ -22,6 +22,9 @@ public class Level2Activity extends AppCompatActivity {
     }
 
     public void back(View view) {
+        Intent intent = new Intent();
+        intent.setClass(Level2Activity.this, LevelActivity.class);
+        startActivity(intent);
         finish();
     }
 

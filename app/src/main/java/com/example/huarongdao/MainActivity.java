@@ -15,8 +15,8 @@ import android.widget.TextView;
 import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
-    public static boolean levels[] = {false,false,false,false,false,false};
-
+//    public static boolean levels[] = {false,false,false,false,false,false};
+    public static boolean levels[] = {true,true,true,true,true,true};
     @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {

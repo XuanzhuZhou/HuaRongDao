@@ -55,7 +55,7 @@
         android:layout_toEndOf="@+id/back_btn"
         android:layout_toRightOf="@+id/back_btn"
         android:gravity="center"
-        android:text="@string/level_name_5"
+        android:text="一路进军"
         android:autoSizeTextType="uniform"
         android:autoSizeMinTextSize="5sp"
         android:autoSizeMaxTextSize="80sp"

@@ -21,9 +21,11 @@ public class Level3Activity extends AppCompatActivity {
         mKlotskiView.setBlocks(blocks);
     }
     public void back(View view) {
+        Intent intent = new Intent();
+        intent.setClass(Level3Activity.this, LevelActivity.class);
+        startActivity(intent);
         finish();
     }
-
     public void next(View view) {
         if (MainActivity.levels[2]==true) {
             Intent intent = new Intent();

@@ -1,5 +1,6 @@
 package com.example.huarongdao;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -23,6 +24,9 @@ public class Level1Activity extends AppCompatActivity {
     }
 
     public void back(View view) {
+        Intent intent = new Intent();
+        intent.setClass(Level1Activity.this, LevelActivity.class);
+        startActivity(intent);
         finish();
     }
 

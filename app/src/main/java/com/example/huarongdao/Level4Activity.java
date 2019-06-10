@@ -21,6 +21,9 @@ public class Level4Activity extends AppCompatActivity {
         mKlotskiView.setBlocks(blocks);
     }
     public void back(View view) {
+        Intent intent = new Intent();
+        intent.setClass(Level4Activity.this, LevelActivity.class);
+        startActivity(intent);
         finish();
     }
 

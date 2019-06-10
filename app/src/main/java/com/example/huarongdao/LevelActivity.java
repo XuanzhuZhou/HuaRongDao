@@ -136,7 +136,7 @@ public class LevelActivity extends AppCompatActivity {
     public void gotolevel6(View view) {
         if (MainActivity.levels[5]==true) {
             Intent intent = new Intent();
-            intent.setClass(LevelActivity.this, Level5Activity.class);
+            intent.setClass(LevelActivity.this, Level6Activity.class);
             startActivity(intent);
             finish();
         } else {

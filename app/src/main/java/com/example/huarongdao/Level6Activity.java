@@ -23,6 +23,9 @@ public class Level6Activity extends AppCompatActivity {
     }
 
     public void back(View view) {
+        Intent intent = new Intent();
+        intent.setClass(Level6Activity.this, LevelActivity.class);
+        startActivity(intent);
         finish();
     }
 
