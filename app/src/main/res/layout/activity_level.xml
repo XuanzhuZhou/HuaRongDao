@@ -156,8 +156,8 @@
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:onClick="gotolevel5"
-        app:layout_constraintStart_toEndOf="@+id/level4text"
-        app:layout_constraintTop_toTopOf="@+id/level4text"
+        app:layout_constraintStart_toEndOf="@+id/level5text"
+        app:layout_constraintTop_toTopOf="@+id/level5text"
         app:srcCompat="@android:drawable/star_off" />
 
     <!--level6-->
@@ -182,8 +182,8 @@
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:onClick="gotolevel6"
-        app:layout_constraintStart_toEndOf="@+id/level5text"
-        app:layout_constraintTop_toTopOf="@+id/level5text"
+        app:layout_constraintStart_toEndOf="@+id/level6text"
+        app:layout_constraintTop_toTopOf="@+id/level6text"
         app:srcCompat="@android:drawable/star_off" />
 
 </android.support.constraint.ConstraintLayout>
