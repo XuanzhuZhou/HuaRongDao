@@ -10,12 +10,9 @@
 
     <ScrollView
         android:id="@+id/strollView"
-        android:layout_width="wrap_content"
+        android:layout_width="315dp"
         android:layout_height="fill_parent"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintEnd_toEndOf="parent">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -31,9 +28,11 @@
                 <!--level放在左上角，固定marginLeft和marginTop，然后以此为基准使用约束布局-->
                 <TextView
                     android:id="@+id/level1text"
-                    android:layout_width="192dp"
-                    android:layout_height="64dp"
-                    android:layout_marginTop="32dp"
+                    android:layout_width="92dp"
+                    android:layout_height="53dp"
+                    android:layout_marginStart="64dp"
+                    android:layout_marginLeft="64dp"
+                    android:layout_marginTop="44dp"
                     android:background="@color/colora"
                     android:gravity="center"
                     android:onClick="gotolevel1"
@@ -50,8 +49,9 @@
                 <!--位置约束在level文本的右边-->
                 <ImageButton
                     android:id="@+id/level1"
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="20dp"
                     android:onClick="gotolevel1"
                     app:layout_constraintLeft_toRightOf="@+id/level1text"
                     app:layout_constraintTop_toTopOf="@+id/level1text"
@@ -62,9 +62,9 @@
                 <!--level2-->
                 <TextView
                     android:id="@+id/level2text"
-                    android:layout_width="192dp"
-                    android:layout_height="64dp"
-                    android:layout_marginTop="32dp"
+                    android:layout_width="92dp"
+                    android:layout_height="53dp"
+                    android:layout_marginTop="52dp"
                     android:background="@color/colora"
                     android:gravity="center"
                     android:onClick="gotolevel2"
@@ -78,8 +78,9 @@
 
                 <ImageButton
                     android:id="@+id/level2"
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="20dp"
                     android:onClick="gotolevel2"
                     app:layout_constraintStart_toEndOf="@+id/level2text"
                     app:layout_constraintTop_toTopOf="@+id/level2text"
@@ -88,9 +89,9 @@
                 <!--level3-->
                 <TextView
                     android:id="@+id/level3text"
-                    android:layout_width="192dp"
-                    android:layout_height="64dp"
-                    android:layout_marginTop="32dp"
+                    android:layout_width="92dp"
+                    android:layout_height="53dp"
+                    android:layout_marginTop="52dp"
                     android:background="@color/colora"
                     android:gravity="center"
                     android:onClick="gotolevel3"
@@ -104,8 +105,9 @@
 
                 <ImageButton
                     android:id="@+id/level3"
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="20dp"
                     android:onClick="gotolevel3"
                     app:layout_constraintStart_toEndOf="@+id/level3text"
                     app:layout_constraintTop_toTopOf="@+id/level3text"
@@ -114,9 +116,9 @@
                 <!--level4-->
                 <TextView
                     android:id="@+id/level4text"
-                    android:layout_width="192dp"
-                    android:layout_height="64dp"
-                    android:layout_marginTop="32dp"
+                    android:layout_width="92dp"
+                    android:layout_height="53dp"
+                    android:layout_marginTop="52dp"
                     android:background="@color/colora"
                     android:gravity="center"
                     android:onClick="gotolevel4"
@@ -130,8 +132,9 @@
 
                 <ImageButton
                     android:id="@+id/level4"
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="20dp"
                     android:onClick="gotolevel4"
                     app:layout_constraintStart_toEndOf="@+id/level4text"
                     app:layout_constraintTop_toTopOf="@+id/level4text"
@@ -140,9 +143,9 @@
                 <!--level5-->
                 <TextView
                     android:id="@+id/level5text"
-                    android:layout_width="192dp"
-                    android:layout_height="64dp"
-                    android:layout_marginTop="32dp"
+                    android:layout_width="92dp"
+                    android:layout_height="53dp"
+                    android:layout_marginTop="52dp"
                     android:background="@color/colora"
                     android:gravity="center"
                     android:onClick="gotolevel5"
@@ -156,8 +159,9 @@
 
                 <ImageButton
                     android:id="@+id/level5"
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="20dp"
                     android:onClick="gotolevel5"
                     app:layout_constraintStart_toEndOf="@+id/level5text"
                     app:layout_constraintTop_toTopOf="@+id/level5text"
@@ -166,9 +170,9 @@
                 <!--level6-->
                 <TextView
                     android:id="@+id/level6text"
-                    android:layout_width="192dp"
-                    android:layout_height="64dp"
-                    android:layout_marginTop="32dp"
+                    android:layout_width="92dp"
+                    android:layout_height="53dp"
+                    android:layout_marginTop="56dp"
                     android:background="@color/colora"
                     android:gravity="center"
                     android:onClick="gotolevel6"
@@ -182,8 +186,9 @@
 
                 <ImageButton
                     android:id="@+id/level6"
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="20dp"
                     android:onClick="gotolevel6"
                     app:layout_constraintStart_toEndOf="@+id/level6text"
                     app:layout_constraintTop_toTopOf="@+id/level6text"
@@ -193,8 +198,8 @@
 
 
         </LinearLayout>
-    </ScrollView>
 
+    </ScrollView>
 
     <!--退出按钮-->
     <ImageButton
@@ -208,7 +213,6 @@
         android:onClick="exit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
 
 
 </android.support.constraint.ConstraintLayout>

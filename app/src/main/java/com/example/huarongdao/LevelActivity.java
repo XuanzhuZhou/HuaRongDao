@@ -37,34 +37,34 @@ public class LevelActivity extends AppCompatActivity {
         setStar(level5, 4, levelText5);
         setStar(level6, 5, levelText6);
 
-        setLevelTextAnimation(levelText1);
-        setLevelTextAnimation(levelText2);
-        setLevelTextAnimation(levelText3);
-        setLevelTextAnimation(levelText4);
-        setLevelTextAnimation(levelText5);
-        setLevelTextAnimation(levelText6);
+//        setLevelTextAnimation(levelText1);
+//        setLevelTextAnimation(levelText2);
+//        setLevelTextAnimation(levelText3);
+//        setLevelTextAnimation(levelText4);
+//        setLevelTextAnimation(levelText5);
+//        setLevelTextAnimation(levelText6);
 
     }
 
-    @SuppressLint("ClickableViewAccessibility")
-    private void setLevelTextAnimation(final TextView levelText) {
-        levelText.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                switch (event.getAction()) {
-                    case MotionEvent.ACTION_DOWN:
-                        int colorGrey = R.color.colorGrey;
-                        levelText.setTextColor(getResources().getColor(colorGrey));
-                        break;
-                    case MotionEvent.ACTION_UP:
-                        int colorBlack = R.color.colorb;
-                        levelText.setTextColor(getResources().getColor(colorBlack));
-                        break;
-                }
-                return false;
-            }
-        });
-    }
+//    @SuppressLint("ClickableViewAccessibility")
+//    private void setLevelTextAnimation(final TextView levelText) {
+//        levelText.setOnTouchListener(new View.OnTouchListener() {
+//            @Override
+//            public boolean onTouch(View v, MotionEvent event) {
+//                switch (event.getAction()) {
+//                    case MotionEvent.ACTION_DOWN:
+//                        int colorGrey = R.color.colorGrey;
+//                        levelText.setTextColor(getResources().getColor(colorGrey));
+//                        break;
+//                    case MotionEvent.ACTION_UP:
+//                        int colorBlack = R.color.colorb;
+//                        levelText.setTextColor(getResources().getColor(colorBlack));
+//                        break;
+//                }
+//                return false;
+//            }
+//        });
+//    }
 
 
     /**
