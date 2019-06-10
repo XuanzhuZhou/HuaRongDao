@@ -8,6 +8,194 @@
     tools:context=".LevelActivity">
 
 
+    <ScrollView
+        android:id="@+id/strollView"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <!--level文本-->
+                <!--level放在左上角，固定marginLeft和marginTop，然后以此为基准使用约束布局-->
+                <TextView
+                    android:id="@+id/level1text"
+                    android:layout_width="192dp"
+                    android:layout_height="64dp"
+                    android:layout_marginTop="32dp"
+                    android:background="@color/colora"
+                    android:gravity="center"
+                    android:onClick="gotolevel1"
+                    android:text="level1"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:textSize="@dimen/level_text_size"
+                    android:textStyle="bold"
+                    app:fontFamily="casual"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="level1" />
+
+                <!--level按钮-->
+                <!--位置约束在level文本的右边-->
+                <ImageButton
+                    android:id="@+id/level1"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:onClick="gotolevel1"
+                    app:layout_constraintLeft_toRightOf="@+id/level1text"
+                    app:layout_constraintTop_toTopOf="@+id/level1text"
+                    app:srcCompat="@android:drawable/star_off" />
+
+
+                <!--以上就是基准，不断开始迭代-->
+                <!--level2-->
+                <TextView
+                    android:id="@+id/level2text"
+                    android:layout_width="192dp"
+                    android:layout_height="64dp"
+                    android:layout_marginTop="32dp"
+                    android:background="@color/colora"
+                    android:gravity="center"
+                    android:onClick="gotolevel2"
+                    android:text="level2"
+                    android:textSize="@dimen/level_text_size"
+                    android:textStyle="bold"
+                    app:fontFamily="casual"
+                    app:layout_constraintStart_toStartOf="@+id/level1text"
+                    app:layout_constraintTop_toBottomOf="@+id/level1text"
+                    tools:text="level2" />
+
+                <ImageButton
+                    android:id="@+id/level2"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:onClick="gotolevel2"
+                    app:layout_constraintStart_toEndOf="@+id/level2text"
+                    app:layout_constraintTop_toTopOf="@+id/level2text"
+                    app:srcCompat="@android:drawable/star_off" />
+
+                <!--level3-->
+                <TextView
+                    android:id="@+id/level3text"
+                    android:layout_width="192dp"
+                    android:layout_height="64dp"
+                    android:layout_marginTop="32dp"
+                    android:background="@color/colora"
+                    android:gravity="center"
+                    android:onClick="gotolevel3"
+                    android:text="level3"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:fontFamily="casual"
+                    app:layout_constraintStart_toStartOf="@+id/level2text"
+                    app:layout_constraintTop_toBottomOf="@+id/level2text"
+                    tools:text="level3" />
+
+                <ImageButton
+                    android:id="@+id/level3"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:onClick="gotolevel3"
+                    app:layout_constraintStart_toEndOf="@+id/level3text"
+                    app:layout_constraintTop_toTopOf="@+id/level3text"
+                    app:srcCompat="@android:drawable/star_off" />
+
+                <!--level4-->
+                <TextView
+                    android:id="@+id/level4text"
+                    android:layout_width="192dp"
+                    android:layout_height="64dp"
+                    android:layout_marginTop="32dp"
+                    android:background="@color/colora"
+                    android:gravity="center"
+                    android:onClick="gotolevel4"
+                    android:text="level4"
+                    android:textSize="@dimen/level_text_size"
+                    android:textStyle="bold"
+                    app:fontFamily="casual"
+                    app:layout_constraintStart_toStartOf="@+id/level3text"
+                    app:layout_constraintTop_toBottomOf="@+id/level3text"
+                    tools:text="level4" />
+
+                <ImageButton
+                    android:id="@+id/level4"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:onClick="gotolevel4"
+                    app:layout_constraintStart_toEndOf="@+id/level4text"
+                    app:layout_constraintTop_toTopOf="@+id/level4text"
+                    app:srcCompat="@android:drawable/star_off" />
+
+                <!--level5-->
+                <TextView
+                    android:id="@+id/level5text"
+                    android:layout_width="192dp"
+                    android:layout_height="64dp"
+                    android:layout_marginTop="32dp"
+                    android:background="@color/colora"
+                    android:gravity="center"
+                    android:onClick="gotolevel5"
+                    android:text="level5"
+                    android:textSize="@dimen/level_text_size"
+                    android:textStyle="bold"
+                    app:fontFamily="casual"
+                    app:layout_constraintStart_toStartOf="@+id/level4text"
+                    app:layout_constraintTop_toBottomOf="@+id/level4text"
+                    tools:text="level5" />
+
+                <ImageButton
+                    android:id="@+id/level5"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:onClick="gotolevel5"
+                    app:layout_constraintStart_toEndOf="@+id/level5text"
+                    app:layout_constraintTop_toTopOf="@+id/level5text"
+                    app:srcCompat="@android:drawable/star_off" />
+
+                <!--level6-->
+                <TextView
+                    android:id="@+id/level6text"
+                    android:layout_width="192dp"
+                    android:layout_height="64dp"
+                    android:layout_marginTop="32dp"
+                    android:background="@color/colora"
+                    android:gravity="center"
+                    android:onClick="gotolevel6"
+                    android:text="level6"
+                    android:textSize="@dimen/level_text_size"
+                    android:textStyle="bold"
+                    app:fontFamily="casual"
+                    app:layout_constraintStart_toStartOf="@+id/level5text"
+                    app:layout_constraintTop_toBottomOf="@+id/level5text"
+                    tools:text="level6" />
+
+                <ImageButton
+                    android:id="@+id/level6"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:onClick="gotolevel6"
+                    app:layout_constraintStart_toEndOf="@+id/level6text"
+                    app:layout_constraintTop_toTopOf="@+id/level6text"
+                    app:srcCompat="@android:drawable/star_off" />
+
+            </android.support.constraint.ConstraintLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
     <!--退出按钮-->
     <ImageButton
         android:id="@+id/exitbtn"
@@ -22,168 +210,5 @@
         app:layout_constraintStart_toStartOf="parent" />
 
 
-    <!--level文本-->
-    <!--level放在左上角，固定marginLeft和marginTop，然后以此为基准使用约束布局-->
-    <TextView
-        android:id="@+id/level1text"
-        android:layout_width="192dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="108dp"
-        android:layout_marginLeft="108dp"
-        android:layout_marginTop="52dp"
-        android:background="@color/colora"
-        android:gravity="center"
-        android:onClick="gotolevel1"
-        android:text="level1"
-        android:textAppearance="@style/TextAppearance.AppCompat"
-        android:textSize="@dimen/level_text_size"
-        android:textStyle="bold"
-        app:fontFamily="casual"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="level1" />
-
-    <!--level按钮-->
-    <!--位置约束在level文本的右边-->
-    <ImageButton
-        android:id="@+id/level1"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:onClick="gotolevel1"
-        app:layout_constraintLeft_toRightOf="@+id/level1text"
-        app:layout_constraintTop_toTopOf="@+id/level1text"
-        app:srcCompat="@android:drawable/star_off" />
-
-
-    <!--以上就是基准，不断开始迭代-->
-    <!--level2-->
-    <TextView
-        android:id="@+id/level2text"
-        android:layout_width="192dp"
-        android:layout_height="64dp"
-        android:layout_marginTop="32dp"
-        android:background="@color/colora"
-        android:gravity="center"
-        android:text="level2"
-        android:textSize="@dimen/level_text_size"
-        android:textStyle="bold"
-        app:fontFamily="casual"
-        android:onClick="gotolevel2"
-        app:layout_constraintStart_toStartOf="@+id/level1text"
-        app:layout_constraintTop_toBottomOf="@+id/level1text"
-        tools:text="level2" />
-
-    <ImageButton
-        android:id="@+id/level2"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:onClick="gotolevel2"
-        app:layout_constraintStart_toEndOf="@+id/level2text"
-        app:layout_constraintTop_toTopOf="@+id/level2text"
-        app:srcCompat="@android:drawable/star_off" />
-
-    <!--level3-->
-    <TextView
-        android:id="@+id/level3text"
-        android:layout_width="192dp"
-        android:layout_height="64dp"
-        android:layout_marginTop="32dp"
-        android:background="@color/colora"
-        android:gravity="center"
-        android:onClick="gotolevel3"
-        android:text="level3"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:fontFamily="casual"
-        app:layout_constraintStart_toStartOf="@+id/level2text"
-        app:layout_constraintTop_toBottomOf="@+id/level2text"
-        tools:text="level3" />
-
-    <ImageButton
-        android:id="@+id/level3"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:onClick="gotolevel3"
-        app:layout_constraintStart_toEndOf="@+id/level3text"
-        app:layout_constraintTop_toTopOf="@+id/level3text"
-        app:srcCompat="@android:drawable/star_off" />
-
-    <!--level4-->
-    <TextView
-        android:id="@+id/level4text"
-        android:layout_width="192dp"
-        android:layout_height="64dp"
-        android:layout_marginTop="32dp"
-        android:background="@color/colora"
-        android:gravity="center"
-        android:text="level4"
-        android:textSize="@dimen/level_text_size"
-        android:textStyle="bold"
-        app:fontFamily="casual"
-        android:onClick="gotolevel4"
-        app:layout_constraintStart_toStartOf="@+id/level3text"
-        app:layout_constraintTop_toBottomOf="@+id/level3text"
-        tools:text="level4" />
-
-    <ImageButton
-        android:id="@+id/level4"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:onClick="gotolevel4"
-        app:layout_constraintStart_toEndOf="@+id/level4text"
-        app:layout_constraintTop_toTopOf="@+id/level4text"
-        app:srcCompat="@android:drawable/star_off" />
-
-    <!--level5-->
-    <TextView
-        android:id="@+id/level5text"
-        android:layout_width="192dp"
-        android:layout_height="64dp"
-        android:layout_marginTop="32dp"
-        android:background="@color/colora"
-        android:gravity="center"
-        android:onClick="gotolevel5"
-        android:text="level5"
-        android:textSize="@dimen/level_text_size"
-        android:textStyle="bold"
-        app:fontFamily="casual"
-        app:layout_constraintStart_toStartOf="@+id/level4text"
-        app:layout_constraintTop_toBottomOf="@+id/level4text"
-        tools:text="level5" />
-
-    <ImageButton
-        android:id="@+id/level5"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:onClick="gotolevel5"
-        app:layout_constraintStart_toEndOf="@+id/level5text"
-        app:layout_constraintTop_toTopOf="@+id/level5text"
-        app:srcCompat="@android:drawable/star_off" />
-
-    <!--level6-->
-    <TextView
-        android:id="@+id/level6text"
-        android:layout_width="192dp"
-        android:layout_height="64dp"
-        android:layout_marginTop="32dp"
-        android:background="@color/colora"
-        android:gravity="center"
-        android:onClick="gotolevel6"
-        android:text="level6"
-        android:textSize="@dimen/level_text_size"
-        android:textStyle="bold"
-        app:fontFamily="casual"
-        app:layout_constraintStart_toStartOf="@+id/level5text"
-        app:layout_constraintTop_toBottomOf="@+id/level5text"
-        tools:text="level6" />
-
-    <ImageButton
-        android:id="@+id/level6"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:onClick="gotolevel6"
-        app:layout_constraintStart_toEndOf="@+id/level6text"
-        app:layout_constraintTop_toTopOf="@+id/level6text"
-        app:srcCompat="@android:drawable/star_off" />
 
 </android.support.constraint.ConstraintLayout>
