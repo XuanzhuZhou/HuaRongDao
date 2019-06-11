@@ -30,6 +30,6 @@ public class Level6Activity extends AppCompatActivity {
     }
 
     public void next(View view) {
-        Toast.makeText(getApplicationContext(),"妹有新的辽！",Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(),"没有新的啦！",Toast.LENGTH_LONG).show();
     }
 }

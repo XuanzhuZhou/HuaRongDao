@@ -89,6 +89,7 @@ public class LevelActivity extends AppCompatActivity {
         Intent intent = new Intent();
         intent.setClass(LevelActivity.this, Level1Activity.class);
         startActivity(intent);
+        finish();
     }
 
     public void gotolevel2(View view) {
